@@ -7,6 +7,8 @@ import ListOfGifs from './components/ListOfGifs';
 
 // creado desde el video https://www.youtube.com/watch?v=QBLbXgeXMU8&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=2
 
+// custom hooks y context https://www.youtube.com/watch?v=2qgs7buSnHQ&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=3
+
 // https://github.com/donpablohdf/practica-giffy.git
 
 function App() {  
