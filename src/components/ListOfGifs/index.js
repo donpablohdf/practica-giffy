@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from "react";
-import Gif from "./Gif";
-import getGifs from '../services/getGifs'
+import React, {useEffect, useState} from "react"
+import Gif from "../Gif"
+import getGifs from '../../services/getGifs'
+import './styles.css'
 
 export default function ListOfGifs ({params}){
     const {keyword} = params
@@ -17,7 +18,7 @@ export default function ListOfGifs ({params}){
     
     },[keyword])  //ejecuta la funcion al cambiar  el valor de keyword
 
-    if (loading) return <i>Cargando</i>
+    if (loading) return (<i>Cargando</i>)
    
     return <>
         {
