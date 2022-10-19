@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from "react"
+import React, { useState} from "react"
 import {Link, useLocation} from 'wouter'
-import getGifs from "../../services/getGifs";
 import ListOfGifs from "../../components/ListOfGifs";
+import { useGifs } from "../../hooks/useGifs";
 
 const POPULAR_GIFTS= ["Matrix", "Chile", "Colombia", "Ecuador"]
 
 export default function Home (){
-    const [keyword, setKeyword]= useState('');
+    const [keyword, setKeyword]= useState('')
     const [path, pushLocation] = useLocation()
 
     
+    const {gifs} = useGifs() // custom hook useGifs
 
     const handleSubmit = evt =>{
         evt.preventDefault() // anula su comportamiento por defecto ya que sin él no sale el log console.log(keyword);       
@@ -26,10 +27,7 @@ export default function Home (){
         <form onSubmit={handleSubmit}>
             <input onChange={handleChange} type='text' value={keyword} />
         </form>
-        <h3 className="App-title">Última busqueda</h3>
-        
         <h3 className="App-title">Los gifts más populares</h3>
-       
         <ul>
             {
                POPULAR_GIFTS.map( (popularGif) => (
@@ -42,5 +40,11 @@ export default function Home (){
                 
             }
         </ul>
+        <h3 className="App-title">Última busqueda</h3>
+        <ListOfGifs gifs={gifs} />
+        
+        
+       
+        
     </>)
 }
