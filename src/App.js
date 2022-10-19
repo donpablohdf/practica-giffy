@@ -4,6 +4,7 @@ import './App.css';
 import Home from './pages/Home'
 import SearchResults from './pages/SearchResults'
 import Detail from './pages/Detail';
+import StaticContext from './context/StaticContext';
 
 // creado desde el video https://www.youtube.com/watch?v=QBLbXgeXMU8&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=2
 
@@ -13,6 +14,7 @@ import Detail from './pages/Detail';
 
 function App() {  
     return (
+    <StaticContext.Provider value={{name: 'donPablo',suscribeteAlCanal: true}}>
     <div className="App">
       <section className="App-content">
         
@@ -33,6 +35,7 @@ function App() {
        
       </section>
     </div>
+    </StaticContext.Provider>
   )
 }
 
