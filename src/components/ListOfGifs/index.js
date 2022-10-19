@@ -30,20 +30,10 @@ export default function ListOfGifs ({params}){
                 id= {id} 
                 />
 
-                /*
-                 <Gif 
-                key={singleGif.id} // corregir error de key react
-                title={singleGif.title} 
-                url={singleGif.url} 
-                id= {singleGif.id} 
-                // {...singleGif} para pasar todas las props (no harian falta las tres lineas anteriores). Aunque no es aconsejable porque no sabemos qé parametros tendría
-                />
-
-                */
             ) 
         }
     </>
-      //map devuelve un array y por cada elemento => devuelve singleGif
+
     
 
 }
